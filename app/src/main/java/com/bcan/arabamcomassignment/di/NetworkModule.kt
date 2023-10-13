@@ -1,6 +1,5 @@
 package com.bcan.arabamcomassignment.di
 
-import com.bcan.arabamcomassignment.BuildConfig
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -35,7 +34,7 @@ object NetworkModule {
     @Provides
     fun provideNetworkRetrofit(client: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(BuildConfig.API_ADDRESS)
+            .baseUrl("https://sandbox.arabamd.com/api/v1/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()
