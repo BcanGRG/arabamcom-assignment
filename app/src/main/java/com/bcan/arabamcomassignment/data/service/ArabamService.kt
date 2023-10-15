@@ -1,5 +1,6 @@
 package com.bcan.arabamcomassignment.data.service
 
+import com.bcan.arabamcomassignment.data.model.response.CarDetailResponse
 import com.bcan.arabamcomassignment.data.model.response.CarListResponse
 import retrofit2.Response
 import retrofit2.http.GET
@@ -15,7 +16,7 @@ interface ArabamService {
         @Query("take") take: Int = 10
     ): Response<List<CarListResponse>>
 
-    //@GET("detail")
-    //suspend fun getCarDetail(@Query("id") id: Int): Response<CarDetailResponse>
+    @GET("detail")
+    suspend fun getCarDetail(@Query("id") id: Int): Response<CarDetailResponse>
 
 }

@@ -1,6 +1,7 @@
 package com.bcan.arabamcomassignment.data.repository
 
 import com.bcan.arabamcomassignment.data.model.CarListQueries
+import com.bcan.arabamcomassignment.data.model.response.CarDetailResponse
 import com.bcan.arabamcomassignment.data.model.response.CarListResponse
 import com.bcan.arabamcomassignment.data.service.ArabamService
 import com.bcan.arabamcomassignment.data.util.NetworkResult
@@ -20,5 +21,9 @@ class ArabamRepositoryImpl @Inject constructor(
                 take = query.take ?: 10
             )
         }
+    }
+
+    override suspend fun getCarDetail(id: Int): Flow<NetworkResult<CarDetailResponse>> {
+        return sendRequest { arabamService.getCarDetail(id) }
     }
 }
