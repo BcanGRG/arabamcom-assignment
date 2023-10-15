@@ -6,13 +6,18 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.bcan.arabamcomassignment.presentation.SplashScreen
 import com.bcan.arabamcomassignment.presentation.detail.CarDetailScreen
 import com.bcan.arabamcomassignment.presentation.list.CarListScreen
 
 @Composable
 fun ArabamNavigation() {
     val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = Screen.ListScreen.route) {
+    NavHost(navController = navController, startDestination = Screen.SplashScreen.route) {
+
+        composable(route = Screen.SplashScreen.route) {
+            SplashScreen(navController)
+        }
 
         composable(route = Screen.ListScreen.route) {
             CarListScreen(navController)
