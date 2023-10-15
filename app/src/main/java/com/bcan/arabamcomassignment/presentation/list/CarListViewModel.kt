@@ -30,6 +30,12 @@ class CarListViewModel @Inject constructor(
     private val _uiState: MutableStateFlow<CarListUiState> = MutableStateFlow(CarListUiState())
     val uiState: StateFlow<CarListUiState> = _uiState.asStateFlow()
 
+    init {
+        getCarList(
+            CarListQueries(take = 20)
+        )
+    }
+
     fun getCarList(queries: CarListQueries) {
         viewModelScope.launch {
             arabamRepository.getCarList(queries).collectLatest { result ->
@@ -63,6 +69,12 @@ class CarListViewModel @Inject constructor(
                     }
                 }
             }
+        }
+    }
+
+    fun errorMessageShown() {
+        _uiState.update { state ->
+            state.copy(errorMessage = null)
         }
     }
 
