@@ -32,7 +32,7 @@ class CarListViewModel @Inject constructor(
 
     init {
         getCarList(
-            CarListQueries(take = 20)
+            CarListQueries(take = 30)
         )
     }
 
