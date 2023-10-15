@@ -1,7 +1,6 @@
 package com.bcan.arabamcomassignment.data.model.response
 
 import com.google.gson.annotations.SerializedName
-import java.util.Properties
 
 data class CarDetailResponse(
 
@@ -15,7 +14,7 @@ data class CarDetailResponse(
     @SerializedName("date") var date: String? = null,
     @SerializedName("dateFormatted") var dateFormatted: String? = null,
     @SerializedName("photos") var photos: ArrayList<String> = arrayListOf(),
-    @SerializedName("properties") var properties: ArrayList<Properties> = arrayListOf(),
+    @SerializedName("properties") var properties: ArrayList<CarProperties> = arrayListOf(),
     @SerializedName("text") var text: String? = null,
     @SerializedName("userInfo") var userInfo: UserInfo? = UserInfo()
 
