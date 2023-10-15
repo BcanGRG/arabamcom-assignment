@@ -26,6 +26,7 @@ import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import com.bcan.arabamcomassignment.R
 import com.bcan.arabamcomassignment.data.model.response.CarListResponse
+import com.bcan.arabamcomassignment.presentation.ui.common.LocationWithIcon
 
 @Composable
 fun CarListItem(
@@ -73,9 +74,9 @@ fun CarListItem(
 
                 Spacer(modifier = Modifier.weight(1f))
                 Row(modifier = Modifier.fillMaxWidth()) {
-                    Text(
-                        text = "${car.location?.cityName} / ${car.location?.townName}",
-                        fontSize = 9.sp
+                    LocationWithIcon(
+                        cityName = car.location?.cityName,
+                        townName = car.location?.townName
                     )
                     Spacer(modifier = Modifier.weight(1f))
                     Text(
