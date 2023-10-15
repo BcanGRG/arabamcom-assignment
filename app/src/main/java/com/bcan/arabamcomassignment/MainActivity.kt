@@ -10,7 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import com.bcan.arabamcomassignment.presentation.list.CarListScreen
+import com.bcan.arabamcomassignment.presentation.util.navigation.ArabamNavigation
 import com.bcan.arabamcomassignment.ui.theme.ArabamcomAssignmentTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -25,7 +25,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = Color.LightGray
                 ) {
-                   CarListScreen()
+                    ArabamNavigation()
                 }
             }
         }
