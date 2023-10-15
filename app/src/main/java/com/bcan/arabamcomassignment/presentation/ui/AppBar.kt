@@ -83,12 +83,12 @@ fun ArabamTopAppBar(
             },
             modifier = Modifier.fillMaxWidth()
         )
-        BeymenDivider(modifier = Modifier.fillMaxWidth())
+        ArabamDivider(modifier = Modifier.fillMaxWidth())
     }
 }
 
 @Composable
-fun BeymenDivider(modifier: Modifier = Modifier, color: Color = LightGray) {
+fun ArabamDivider(modifier: Modifier = Modifier, color: Color = LightGray) {
     Divider(
         color = color,
         thickness = 1.dp,
