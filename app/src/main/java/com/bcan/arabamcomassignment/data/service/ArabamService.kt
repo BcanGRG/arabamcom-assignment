@@ -13,7 +13,7 @@ interface ArabamService {
         @Query("sort") sort: Int? = 1,
         @Query("sortDirection") sortDirection: Int? = 0,
         @Query("skip") skip: Int? = 0,
-        @Query("take") take: Int = 10
+        @Query("take") take: Int = 20
     ): Response<List<CarListResponse>>
 
     @GET("detail")
