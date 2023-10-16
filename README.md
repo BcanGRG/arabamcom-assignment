@@ -9,10 +9,14 @@ This repository is a job application assignment for Arabam.com for Android. The 
 - Shows pictures from advertisements.
 - Redirects to the detail page when an ad is selected.
 
-## Detay sayfası:
+## Detail page:
 - Shows the selected ad.
 - Shows images from the ad.
 - Shows detailed information about the ad.
+
+## Note:
+There is no dark mode feature in the application.
+
 
 
 ## Authors
@@ -33,7 +37,12 @@ Select an ad.
 You will see a page that shows the details of the ad.
 
 
-## Screenshots
+## Feedback
+
+If you have any feedback, please reach out to us at burockcan2309@gmail.com
+
+
+## Application APK
 
 ![App Apk](https://github.com/BcanGRG/arabamcom-assignment/blob/main/app/src/main/res/drawable/Arabam_com.png)
 
